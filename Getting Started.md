@@ -53,6 +53,19 @@ E.G. Change listening port from default 8080 to 8888
 ```
 server.port=8888 
 ```
-Visit full documentation -- https://docs.spring.io/spring-boot/docs/current/reference/html/application-properties.html#appendix.application-properties.core
+For other properties visit -- https://docs.spring.io/spring-boot/docs/current/reference/html/application-properties.html#appendix.application-properties.core
 
+### 2.7 Creating an Executable Jar
+Simply insert the following lines just below the dependencies section in pom.xml, in ide maven run "package" or create Jar via command line
+Execute jar using -- java -jar target/your_jar_name.jar
+```xml
+<build>
+    <plugins>
+        <plugin>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-maven-plugin</artifactId>
+        </plugin>
+    </plugins>
+</build>
+```
 
